@@ -14,6 +14,11 @@ const __dirname = dirname(__filename);
 app.use(express.static(__dirname + '/public'))
 
 import routes from "./routes/route.js"
+//import mongoose from 'mongoose';
+//const url = "mongodb+srv://marcelosiedler:ifsul@ifsul.fify4.mongodb.net/"
+
+//mongoose.connect(url)
+//console.log(mongoose.connect)
 
 
 app.use(routes)

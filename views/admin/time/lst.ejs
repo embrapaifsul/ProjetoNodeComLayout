@@ -5,7 +5,7 @@
     <input type="text" name="pesquisar" placeholder="digite a busca.."><button type="submit"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;Pesquisar</button>
   </form>
 </div>
-<!-- Tabela de Times -->
+
 <!-- Tabela de Times -->
 <table>
   <thead>
@@ -17,39 +17,19 @@
     </tr>
   </thead>
   <tbody>
-    
+    <%Times.forEach(function(time){%>
     <tr>
-      <td>1</td>
-      <td>Bage</td>
-      <td>A</td>
+      <td><%=time.id%></td>
+      <td><%=time.nome%></td>
+      <td><%=time.estadio%></td>
       <td>
-        <a href="/admin/time/edt/67d2d0e307f6bcf5e16a532a" class="btn edit"><i class="fas fa-edit"></i>&nbsp;Editar</a>
+        <a href="/admin/time/edt/<%=time.id%>" class="btn edit"><i class="fas fa-edit"></i>&nbsp;Editar</a>
         
-        <button class="btn delete"  onclick="confirmarExclusao('67d2d0e307f6bcf5e16a532a')"><i class="fas fa-trash"></i>&nbsp; Excluir</button>
+        <button class="btn delete"  onclick="confirmarExclusao('<%=time.id%>')"><i class="fas fa-trash"></i>&nbsp; Excluir</button>
       </td>
     </tr>
+    <%})%>
    
-    <tr>
-      <td>1</td>
-      <td>Nono Hamburgo 2</td>
-      <td>Bem feito</td>
-      <td>
-        <a href="/admin/time/edt/67d2d0ed07f6bcf5e16a532c" class="btn edit"><i class="fas fa-edit"></i>&nbsp;Editar</a>
-        
-        <button class="btn delete"  onclick="confirmarExclusao('67d2d0ed07f6bcf5e16a532c')"><i class="fas fa-trash"></i>&nbsp; Excluir</button>
-      </td>
-    </tr>
-   
-    <tr>
-      <td>1</td>
-      <td>Vitoria</td>
-      <td>C</td>
-      <td>
-        <a href="/admin/time/edt/67d2d10b07f6bcf5e16a532f" class="btn edit"><i class="fas fa-edit"></i>&nbsp;Editar</a>
-        
-        <button class="btn delete"  onclick="confirmarExclusao('67d2d10b07f6bcf5e16a532f')"><i class="fas fa-trash"></i>&nbsp; Excluir</button>
-      </td>
-    </tr>
    
   </tbody>
 </table>
